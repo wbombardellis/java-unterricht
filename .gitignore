@@ -1,3 +1,24 @@
+#Persoenliche Ordner
 Netbeans
 Orga
 Referenzen
+
+# Latex
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.idx
+*.toc
+#*.pdf
+*.gz
+*.lof
+*.lot
+*.*~
+*.nav
+*.snm
+*.auxlock
+
+# Java
+**/build/
