@@ -1,7 +1,8 @@
 #Persoenliche Ordner
 Netbeans
-Orga
 Referenzen
+Orga/2019-20/*
+!Orga/2019-20/Plan
 
 # Latex
 *.aux
