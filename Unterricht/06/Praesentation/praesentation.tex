@@ -1,0 +1,190 @@
+\documentclass{beamer}
+
+\usepackage{default}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+\usetheme{Berlin}
+
+\newcommand{\cindent}{\hskip20pt}
+
+%Header Settings
+%\setbeamertemplate{headline}{}
+
+%Footer Settings
+\setbeamertemplate{navigation symbols}{
+	\usebeamerfont{footline}%
+	\usebeamercolor[fg]{footline}%
+	\hspace{1em}%
+	\insertframenumber/\inserttotalframenumber
+}
+
+\title[Java]{Java - If-Else}
+\author[W. Bombardelli]{William Bombardelli}
+\institute[Schweizerschule Mexiko]
+{
+	\vskip 12pt
+	Schweizerschule Mexiko, Ciudad de México, Mexico \\
+	\texttt{\url{https://github.com/wbombardellis/java-unterricht}}
+}
+\date{30 October 2019}
+
+\makeatletter
+\hypersetup{
+	pdftitle = {\@title}, pdfkeywords = {Java}, pdfauthor = {\@author}
+} 
+\makeatother
+
+\begin{document}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Organization}
+		\tableofcontents
+	\end{frame}
+
+	%-------------------
+	% If-Else
+	%-------------------
+	\section{If-Else}
+	\begin{frame}
+		\frametitle{If}
+		\begin{itemize}
+			\item Write a program that reads a double value and prints if it is positive.
+		\end{itemize}
+		\pause
+		$if\ (a > 0)\ \{$\\
+		\cindent $System.out.println(a\ + $ `` is positive." $);$\\
+		$\}$\\
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{If-Else}
+		\begin{itemize}
+			\item Write a program that reads a double value and tells whether it is positive or not.
+		\end{itemize}
+		$if\ (a > 0)\ \{$\\
+		\cindent $System.out.println(a\ + $ `` is positive." $);$\\
+		$\}\ else\ \{$\\
+		\cindent $System.out.println(a\ + $ `` is not positive." $);$\\
+		$\}$\\
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{If-ElseIf-Else}
+		\begin{itemize}
+			\item Write a program that reads a double value and tells whether it is positive, negative or zero.
+		\end{itemize}
+		$if\ (a > 0)\ \{$\\
+		\cindent $System.out.println(a\ + $ `` is positive." $);$\\
+		$\}\ else\ if\ (a < 0) \ \{$\\
+		\cindent $System.out.println(a\ + $ `` is negative." $);$\\
+		$\}\ else\ \{$\\
+		\cindent $System.out.println(a\ + $ `` is zero." $);$\\
+		$\}$\\
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Exercises}
+		\begin{enumerate}
+			\item Write a program that greets the user correctly according to the current time. The rule is the following:
+			\begin{itemize}
+				\item If current time is before 12a.m., then greet him/her with ``good morning".
+				\item If current time is between 12a.m. and 16p.m., then greet him/her with ``good afternoon".
+				\item If current time is after 16p.m, then greet him/her with ``good evening".
+			\end{itemize}
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Exercises}
+		\begin{enumerate}[2]
+			\item Extend your assignment's program further using If or If-Else.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{If-ElseIf-Else Grammar Rules}
+		$if\ (\langle \text{Boolean condition} \rangle)\ \{$\\
+		\cindent $...$\\
+		$\}\ [else\ if\ (\langle \text{Boolean condition} \rangle) \ \{$\\
+		\cindent $...$\\
+		$\}]\ [else\ \{$\\
+		\cindent $...$\\
+		$\}]$\\
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Exercises}
+		\begin{enumerate}
+			\item Implement the following algorithm for finding real solutions of a quadratic polynomial $ax^2 + bx + c$ in Java.
+			\begin{itemize}
+				\item Read $a$, $b$ and $c$.
+				\item Calculate $\Delta := b^2 - 4ac$
+				\item If $\Delta \ge 0$ then print solutions $x_1$ and $x_2$
+				\begin{itemize}
+					\item $x_1 = \frac{-b + \sqrt{\Delta}}{2a}, x_2 = \frac{-b - \sqrt{\Delta}}{2a}$
+				\end{itemize}
+				\item Otherwise print that there is no real solutions for this polynomial.
+			\end{itemize}
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Exercises}
+		\begin{enumerate}[2]
+			\item Write a program that gets a positive integer number as input and writes whether that number is even or odd.
+			\begin{itemize}
+				\item Tip 1: An number $n \in \mathbb{N}$ is even if, and only if, $n$ divided by 2 gives remainder 0.
+				\item Tip 2: In Java $a\ \%\ b$ results in the remainder of the whole division of $a$ by $b$.
+				\item Also: Ensure that the input is positive. If it is not, then reject user's input.
+			\end{itemize}
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+	\frametitle{Exercises}
+	\begin{enumerate}[3]
+		\item Write a program that reads two numbers and a character representing the operation to perform over those numbers, and print the result accordingly. Example for an execution:\\
+		\vskip20pt
+		\texttt{Please provide the first number:}\\
+		\texttt{2}\\
+		\texttt{Please provide the operation: }\\
+		\texttt{+}\\
+		\texttt{Please provide the second number: }\\
+		\texttt{3}\\
+		\texttt{The result of 2 + 3 is 5}\\
+	\end{enumerate}
+	\end{frame}
+		
+	%-------------------
+	% Summary
+	%-------------------
+	\section{Summary}
+	
+	\begin{frame}
+		\frametitle{Summary}
+		\begin{itemize}
+			\item IF-Else allows you to control the flow of your program.
+			\item Next Lesson: Boolean Algebra
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{References}
+		\begin{itemize}
+			\item W3C Tutorial: 
+			\begin{itemize}
+				\item \url{https://www.w3schools.com/java/java_conditions.asp}
+			\end{itemize}
+			\item Exercises: \url{https://www.w3schools.com/java/exercise.asp}
+			\begin{itemize}
+				\item Java If...Else
+			\end{itemize}
+		\end{itemize}
+		
+	\end{frame}
+
+\end{document}
