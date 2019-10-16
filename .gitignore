@@ -23,9 +23,12 @@ Orga/2019-20/*
 
 # Java
 **/build/
+/Programme/01/nullstellen/nbproject/private/
 /Programme/04/operators/nbproject/private/
 /Programme/04/diphthong/nbproject/private/
 /Programme/05/naturalscale/nbproject/private/
 /Programme/05/composer/nbproject/private/
 /Programme/05/composerscale/nbproject/private/
 /Programme/05/draw/nbproject/private/
+/Programme/06/propergreeting/nbproject/private/
+/Programme/06/simplecalc/nbproject/private/
