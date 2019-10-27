@@ -1,0 +1,150 @@
+\documentclass[a4paper]{article} 
+\input{style/head.tex}
+
+\usepackage{multirow}
+
+\newcommand{\yourname}{Schweizerschule Mexiko, CDMX} % replace YOURNAME with your name
+\newcommand{\yournetid}{M.Sc. William Bombardelli} % replace YOURNETID with your NetID
+\newcommand{\youremail}{wbombardellis@gmail.com} % replace YOUREMAIL with your email
+\newcommand{\assignmentnumber}{7} % replace X with assignment number
+\newcommand{\coursename}{Java - Boolean Algebra} % replace X with assignment number
+
+\begin{document}
+	
+	\input{style/header.tex}
+	
+	\section{Boolean Algebra}
+	In the classical algebra, we deal with sets of numbers and operations over them. Example for sets:
+	\begin{itemize}
+		\item $\mathbb{N} = \{1, 2, 3, ...\}$
+		\item $\mathbb{Z} = \{..., -3, -2, -1, 0, 1, 2, 3, ...\}$
+		\item $\mathbb{R} = \{..., -1.1, ..., -1, ..., 0, ..., 1, ..., 1.1, ...\}$
+	\end{itemize}
+
+	In Java, we can work with these numbers using integer or double variables.\\
+	$int\ a\ =\ 1;$\\
+	$int\ b\ =\ 2 + 3;$
+	
+	The operations for this algebra include:
+	\begin{itemize}
+		\item +, -, $\times$, $\div$, ...
+	\end{itemize}
+	In Java, we can operate over numbers using arithmetic operators.\\
+	$int\ c\ =\ a + b;$\\
+	$int\ d\ =\ c * b;$\\
+	
+	\par
+	In the Boolean algebra, we work with a new set 
+	\begin{equation*}
+		\mathbb{B} = \{true, false\}
+	\end{equation*} which contains only two values: $true$ and $false$.
+	In Java, we can work with these values using boolean variables.\\
+	$int\ a\ =\ true;$\\
+	$int\ b\ =\ 1 > 0;$\\
+	$int\ c\ =\ 1 == 1;$
+	
+	The operations over this set are three and are defined the following manner:
+	\begin{itemize}
+		\item AND (\&\&)
+		\begin{itemize}
+			\item $true\ \&\&\ true = true$
+			\item $true\ \&\&\ false = false$
+			\item $false\ \&\&\ true = false$
+			\item $false\ \&\&\ false = false$
+		\end{itemize}
+		\item OR ($||$)
+		\begin{itemize}
+			\item $true\ ||\ true = true$
+			\item $true\ ||\ false = true$
+			\item $false\ ||\ true = true$
+			\item $false\ ||\ false = false$
+		\end{itemize}
+		\item NOT (!)
+		\begin{itemize}
+			\item $!\ true = false$
+			\item $!\ false = true$
+		\end{itemize}
+	\end{itemize}
+	In Java, we can operate over booleans using boolean operators.\\
+	$boolean\ d = true\ \&\&\ false;$\\
+	$boolean\ e = true\ ||\ true;$\\
+	$boolean\ f = d\ \&\&\ e;$\\
+	$boolean\ g = d\ ||\ e;$\\
+
+	\section{Exercises}
+	\begin{enumerate}
+		\item Write a program that takes a bi-dimensional coordinate $(x,y)$ and outputs which quadrant it belongs to.
+		 
+		\item Write a classifier of triangles according to their side lengths. A triangle can be in only one of the following classes.
+		\begin{itemize}
+			\item Equilateral: All sides have equal lengths.
+			\item Isosceles: Only two sides have equal lengths.
+			\item Scalene: All sides have different lengths.
+		\end{itemize}
+	
+		\item The Brazilian electoral legislation defines the following rules for the eligibility to vote. If the citizen is
+		\begin{itemize}
+			\item younger than 16, then they \textbf{may not} vote;
+			\item between 16 (inclusive) and 18 (exclusive) years old or older than 64 years old, then they \textbf{may} vote;
+			\item between 18 (inclusive) and 65 (exclusive) years old, then they \textbf{must} vote.
+		\end{itemize}
+		Now write a program that informs a citizen's eligibility to vote, based on their age.
+		
+		\item The body mass index ($bmi$) is calculated according to the following formula: $bmi = \frac{mass (Kg)}{height^2 (m)}$. Based on the result, a person is classified according to the following table:
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{crr}
+				Gender 					& $bmi$						& Class \\
+				\hline\\
+				\multirow{4}{*}{Male}	&	$bmi \le 20.7$			& underweight \\
+										&	$20.7 < bmi \le 26.4$	& normal \\
+										& 	$26.4 < bmi \le 31.1$	& overweight \\
+										&	$31.1 < bmi $			& obese \\
+				\hline\\
+				\multirow{4}{*}{Female}	&	$bmi \le 19.1$			& underweight \\
+										&	$19.1 < bmi \le 25.8$	& normal \\
+										& 	$25.8 < bmi \le 32.3$	& overweight \\
+										&	$32.3 < bmi $			& obese \\
+				\hline\\
+			\end{tabular}
+		\end{table}
+	\end{enumerate}
+
+	\section{Summary}
+	\begin{itemize}
+		\item Truth Tables:\\
+		\begin{tabular}{c | c c}
+			OR ($||$) & True & False \\
+			\hline
+			True	& True & True \\
+			False	& True & False\\
+		\end{tabular}\\
+		\par
+		\begin{tabular}{c | c c}
+			AND ($\&\&$) & True & False \\
+			\hline
+			True	& True & False \\
+			False	& False & False\\
+		\end{tabular}\\
+		\par
+		\begin{tabular}{c | c}
+			NOT ($!$) &\\
+			\hline
+			True	& False \\
+			False	& True \\
+		\end{tabular}
+		\item Next Lesson: While
+	\end{itemize}
+	
+	\section{References}
+	\begin{itemize}
+		\item W3C Tutorial: 
+		\begin{itemize}
+			\item \url{https://www.w3schools.com/java/java_booleans.asp}
+		\end{itemize}
+		\item Exercises: \url{https://www.w3schools.com/java/exercise.asp}
+		\begin{itemize}
+			\item Java Booleans
+		\end{itemize}
+	\end{itemize}
+\end{document}
