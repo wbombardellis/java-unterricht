@@ -30,11 +30,20 @@ public class RootFinder {
         double delta = b*b - 4 * a * c;
         
         if (delta >= 0) {
-            //There are real solutions
-            double x1 = ((-b) + Math.sqrt(delta)) / (2 * a);
-            double x2 = ((-b) - Math.sqrt(delta)) / (2 * a);
-            System.out.println("x1 = " + x1);
-            System.out.println("x2 = " + x2);
+            //Maybe there are real solutions
+            if (a != 0) {
+                double x1 = ((-b) + Math.sqrt(delta)) / (2 * a);
+                double x2 = ((-b) - Math.sqrt(delta)) / (2 * a);
+                System.out.println("x1 = " + x1);
+                System.out.println("x2 = " + x2);
+            } else if (b != 0) {
+                double x1 = -c / b;
+                System.out.println("x1 = " + x1);
+            } else if (c != 0) {
+                System.out.println("Keine reele Loesungen");
+            } else {
+                System.out.println("Endlich viele Loesungen");
+            }
         } else {
             System.out.println("Keine reelle Loesung");
         }
