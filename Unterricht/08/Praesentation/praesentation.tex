@@ -52,28 +52,72 @@
 	\begin{frame}
 		\frametitle{While}
 		\begin{itemize}
-			\item ...
+			\item Play a musical note forever.
 		\end{itemize}
+		\pause
+		$while\ (true)\ \{$\\
+			\cindent $note.setMessage(ShortMessage.NOTE\_ON,\ 0,\ 60,\ 100);$\\
+			\cindent $rcvr.send(note,\ timeStamp);$\\
+			\cindent $Thread.sleep(1000);$\\
+		$\}$\\
 	\end{frame}
 
 	\begin{frame}
-		\frametitle{Exercises}
-		\begin{enumerate}
-			\item...
-		\end{enumerate}
+		\frametitle{While}
+		\begin{itemize}
+			\item Play a musical note 100 times	.
+		\end{itemize}
+		\pause
+		$int\ count\ =\ 1;$\\
+		$while\ (count\ <=\ 100)\ \{$\\
+			\cindent $note.setMessage(ShortMessage.NOTE\_ON,\ 0,\ 60,\ 100);$\\
+			\cindent $rcvr.send(note,\ timeStamp);$\\
+			\cindent $Thread.sleep(100);$\\
+			\cindent $count++;$\\
+		$\}$\\
 	\end{frame}
 
 	\begin{frame}
-		\frametitle{While Grammar Rules}
-		$while\ (\langle \text{Boolean condition} \rangle)\ \{$\\
-		\cindent $...$\\
+		\frametitle{While}
+		\begin{itemize}
+			\item Play all musical notes (``supported by the computer'').
+		\end{itemize}
+		\pause
+		$int\ freq\ =\ 0;$\\
+		$while\ (freq\ <\ 128)\ \{$\\
+			\cindent $note.setMessage(ShortMessage.NOTE\_ON,\ 0,\ freq,\ 100);$\\
+			\cindent $rcvr.send(note,\ timeStamp);$\\
+			\cindent $Thread.sleep(100);$\\
+			\cindent $freq++;$\\
 		$\}$\\
 	\end{frame}
 
 	\begin{frame}
 		\frametitle{Exercises}
 		\begin{enumerate}
-			\item ...
+			\item Write a program that prints all integer numbers up to 1000
+			\pause
+			\item Write a program that prints the Fibonacci sequence up to 1000. That is: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ... 
+			\pause
+			\begin{itemize}
+				\item Tip: $F_0 = 0, F_1 = 1, F_n = F_{n-2} + F_{n-1},$ for $n > 1$
+			\end{itemize}
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{While Grammar Rules}
+		$while\ (\langle \text{Boolean condition} \rangle)\ \{$\\
+			\cindent $...$\\
+		$\}$\\
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Exercises}
+		\begin{enumerate}
+			\item Write a program that tells whether a number is prime or not. A prime number is a natural number greater than 1 that is only divisible by 1 and by itself.
+			\pause
+			\item Write a program that reads the grades of ten students and print at the end the greatest note, the least note, the average note (arithmetic mean) and how many students passed ($grade \ge 7$).
 		\end{enumerate}
 	\end{frame}
 		
@@ -86,7 +130,7 @@
 		\frametitle{Summary}
 		\begin{itemize}
 			\item While allows you to execute the same code several times
-			\item Next Lesson: Do-While
+			\item Next Lesson: For
 		\end{itemize}
 	\end{frame}
 
