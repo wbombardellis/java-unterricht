@@ -27,8 +27,23 @@ public class Fibonacci {
             next = prev + num;
         }
         
+        System.out.println("=====================");
+        ////////// Alternative solution \\\\\\\\\\\\\
+        int previousPrevious = 0;
+        int previous = 1;
+        int n = previousPrevious + previous;
         
-                
+        System.out.println(previousPrevious);
+        System.out.println(previous);
+        
+        while(n < 1000) {
+            System.out.println(n);
+            
+            previousPrevious = previous;
+            previous = n;
+            n = previousPrevious + previous;
+        }
+            
     }
     
 }
