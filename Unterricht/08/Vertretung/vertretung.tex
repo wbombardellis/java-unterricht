@@ -1,0 +1,87 @@
+\documentclass[a4paper]{article} 
+\input{style/head.tex}
+
+\usepackage{listings}
+\usepackage{multirow}
+
+\newcommand{\yourname}{Schweizerschule Mexiko, CDMX} % replace YOURNAME with your name
+\newcommand{\yournetid}{M.Sc. William Bombardelli} % replace YOURNETID with your NetID
+\newcommand{\youremail}{wbombardellis@gmail.com} % replace YOUREMAIL with your email
+\newcommand{\assignmentnumber}{8} % replace X with assignment number
+\newcommand{\coursename}{Java - While} % replace X with assignment number
+
+\begin{document}
+	
+	\input{style/header.tex}
+	
+	\section{Exercises}
+	\begin{enumerate}
+		\item Read the following solutions for the Fibonacci problem.
+		\begin{lstlisting}[language=Java, basicstyle=\scriptsize]
+public static void main(String[] args) {
+	int prev;
+	int num = 0;
+	int next = 1;
+	
+	while (num <= 1000) {
+		System.out.println(num);
+		
+		prev = num;
+		num = next;
+		next = prev + num;
+	}
+		
+	System.out.println("=====================");
+	////////// Alternative solution \\\\\\\\\\\\\
+	
+	int previousPrevious = 0;
+	int previous = 1;
+	int n = previousPrevious + previous;
+		
+	System.out.println(previousPrevious);
+	System.out.println(previous);
+		
+	while(n <= 1000) {
+		System.out.println(n);
+		
+		previousPrevious = previous;
+		previous = n;
+		n = previousPrevious + previous;
+	}
+}
+		\end{lstlisting}
+		Now complete the following table with the values of the variables $prev$, $num$ and $next$ at each iteration.
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{| c | c | c | c |}
+				\hline
+				Iteration & $prev$ & $num$ & $next$ \\
+				\hline
+				1 & & & \\
+				2 & & & \\
+				3 & & & \\
+				4 & & & \\
+				5 & & & \\
+				6 & & & \\
+				7 & & & \\
+				\hline
+			\end{tabular}
+		\end{table}
+		And, finally, finish your own solution, if you have not done that yet.
+		\item Write a program that reads the grades of ten students and print at the end the greatest note, the least note, the average note (arithmetic mean) and how many students passed ($grade \ge 7$).
+		\item Write a program that tells whether a number is prime or not. A prime number is a natural number greater than 1 that is only divisible by 1 and by itself.
+	\end{enumerate}
+	
+	\section{References}
+	\begin{itemize}
+		\item W3C Tutorial: 
+		\begin{itemize}
+			\item \url{https://www.w3schools.com/java/java_while_loop.asp}
+		\end{itemize}
+		\item Extra Exercises: \url{https://www.w3schools.com/java/exercise.asp}
+		\begin{itemize}
+			\item Java Loops
+		\end{itemize}
+		\item Solutions: \url{https://github.com/wbombardellis/java-unterricht/tree/master/Programme/08}
+	\end{itemize}
+\end{document}
