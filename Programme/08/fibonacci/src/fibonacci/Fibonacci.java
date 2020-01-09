@@ -36,7 +36,7 @@ public class Fibonacci {
         System.out.println(previousPrevious);
         System.out.println(previous);
         
-        while(n < 1000) {
+        while(n <= 1000) {
             System.out.println(n);
             
             previousPrevious = previous;
