@@ -27,7 +27,7 @@
 	Schweizerschule Mexiko, Ciudad de México, Mexico \\
 	\texttt{\url{https://github.com/wbombardellis/java-unterricht}}
 }
-\date{26 February 2020}
+\date{11 March 2020}
 
 \makeatletter
 \hypersetup{
@@ -66,8 +66,16 @@
 	\begin{frame}
 		\frametitle{Exercises}
 		\begin{enumerate}
-			\item Now you want your program to send the students' grades to the German Ministry of Education. The problem is that the German grading system is different from the one you use. So extend your program to print the students' grade according to the German system. The grades are translated according to the table below.
-			%TODO: Add table
+			\item Now you want your program to send the students' grades to the German Ministry of Education. The problem is that the German grading system is different from the one you use. So extend your program to print the students' grade according to the German system. The grades are translated according to the table below.\\
+			\centering
+			\begin{tabular}{c | c}
+				Mexican 	& German \\
+				\hline
+				0.0 - 5.9	& 4.0 \\
+				6.0 - 6.9	& 3.0 \\
+				7.0 - 8.9	& 2.0 \\
+				9.0 - 10.0	& 1.0 \\
+			\end{tabular}
 		\end{enumerate}
 	\end{frame}
 
@@ -89,9 +97,48 @@
 		\end{enumerate}
 	\end{frame}
 
-	%TODO: Perfect Change
+	\begin{frame}
+		\frametitle{Exercises}
+		\begin{enumerate}
+			\item Write a program that reads the price of a product and the received money, and prints the amount of change detailed by how many bills of each value to give. Example:\\
+			\pause
+			\texttt{Price: \$100\\
+			Received: \$299\\
+			Change: \$199\\
+			Change Bills: \\
+			1 bills of \$100\\
+			1 bills of \$50\\
+			2 bills of \$20\\
+			0 bills of \$10\\
+			1 bills of \$5\\
+			2 bills of \$2\\
+			0 bills of \$1}
+		\end{enumerate}
+	\end{frame}
 
-	%TODO: Bi-dimensional arrays
+	%-------------------
+	% Bidimensional Arrays
+	%-------------------
+	\section{Bidimensional Arrays}
+	\begin{frame}
+		\frametitle{Bidimensional Arrays}
+		Bidimensional arrays allow you to store a table in one variable.
+		\pause
+		$int[][]\ table\ =\ new\ int[10][10];$\\
+		$table[0][0]\ =\ 23;$\\
+		$table[1][2]\ =\ 42;$\\
+		\pause
+		$for\ (int\ i = 0; i < 10; i++)\ \{$\\
+			\cindent $for\ (int\ j = 0; j < 10; j++)\ \{$\\
+				\cindent \cindent $System.out.println(table[i][j]);$\\
+			\cindent $\}$\\
+		$\}$\\
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Image Processing - Filters}
+		\includegraphics[width=\textwidth]{lenna.png}
+	\end{frame}
 
 	%-------------------
 	% Summary
