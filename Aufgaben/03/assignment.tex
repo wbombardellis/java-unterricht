@@ -1,0 +1,113 @@
+\documentclass[a4paper]{article} 
+\input{style/head.tex}
+
+%-------------------------------
+%	TITLE VARIABLES (identify your work!)
+%-------------------------------
+
+\newcommand{\yourname}{Schweizerschule Mexiko, CDMX} % replace YOURNAME with your name
+\newcommand{\yournetid}{M.Sc. William Bombardelli} % replace YOURNETID with your NetID
+\newcommand{\youremail}{wbombardellis@gmail.com} % replace YOUREMAIL with your email
+\newcommand{\assignmentnumber}{2} % replace X with assignment number
+\newcommand{\coursename}{Java} % replace X with assignment number
+
+\begin{document}
+	
+	%-------------------------------
+	%	TITLE SECTION (do not modify unless you really need to)
+	%-------------------------------
+	\input{style/header.tex}
+	
+	\section{Task}
+	\label{sec:task}
+	Write a program in Java that composes a melody and gives the user the chance to modify it. The program should first ask the user how many musical notes he/ she wants and in which scale should the melody be. After that, the program randomly samples the desired amount of notes from that scale and plays it for the user. Then, the program shows a menu of options to modify this melody. The user chooses one of the options and hears the new modified version of it. The program must repeat this cycle until the user chooses the option to exit.
+	
+	Below is a diagram of the behavior of the program.
+	
+	\usetikzlibrary{arrows,positioning} 
+	\tikzset{
+		%Define standard arrow tip
+		>=stealth',
+		%Define style for boxes
+		punkt/.style={
+			rectangle,
+			rounded corners,
+			draw=black, very thick,
+			text width=20em,
+			minimum height=2em,
+			text centered},
+		% Define arrow style
+		pil/.style={
+			<-,
+			thick,
+			shorten <=2pt,
+			shorten >=2pt,}
+	}
+	{\centering
+	\begin{tikzpicture}
+		\node[punkt] (p1) {Ask for amount of notes and read it};
+		\node[punkt, below=0.5cm of p1] (p2) {Show available scales and read it}
+			edge[pil] (p1);
+		\node[punkt, below=0.5cm of p2] (p3) {Compose the melody and play it}
+			edge[pil] (p2);
+		\node[punkt, below=0.5cm of p3] (p4) {Show edit menu and read option}
+			edge[pil] (p3);
+		\node[punkt, below=0.5cm of p4] (p5) {Modify the melody according to the chosen option and play it}
+			edge[pil] (p4)
+			edge[pil, bend left=90, ->] (p4);
+		\node[punkt, right=1.5cm of p4, text width=6em] (p6) {Exit}
+			edge[pil] (p4);
+	\end{tikzpicture}
+	}
+	
+	The time between each note must be randomly chosen from 100ms to 1000ms. You can choose which scales you want to make available, three is the minimal amount, for example, natural major (C,D,E,F,G,A,B), natural minor (C,D,Eb,F,G,Ab,Bb) and locrian mode (C,Db,Eb,F,Gb,Ab,Bb). Other options available on internet include blues and jazz scales.
+	
+	The edit menu options must be, at least, the following.
+	
+	\texttt{1: Up Pitch Shift \emph{(Add a semi-tone to all notes in the melody)}\\
+	2: Down Pitch Shift \emph{(Subtract a semi-tone to all notes in the melody)}\\
+	3: Stretch $\times$2 \emph{(Double the time between each note)}\\
+	4: Squeeze $\div$2 \emph{(Divides by two the time between each note)}\\
+	5: Harmonize (add 5th) \emph{(Creates a second melody consisting of the 5th degree of the main melody, that is, if the scale is the natural major and the note in the main melody is C, the note in the second melody is G - which is the 5th note in that scale)}}
+
+	For the completion of this exercise, you will need the skills of \emph{if}, \emph{loops} (\emph{while/for}) and \emph{arrays}.
+
+	\section{Groups}
+	You may work in pairs or alone.
+	
+	\section{Work Plan}
+	You will undergo a weekly check-in to present your advances. Every Wednesday you must write an e-mail to \emph{wbombardellis@gmail.com} with the following items.
+	
+	\begin{tabular}{l | l}
+		April, 29th			& Present plan of implementation, which must include a sketch of how you code will look like;\\
+		& how you store the scales; how the melody gets created; how notes' duration gets defined.\\
+		\hline
+		May, 6th			& Present basis of the source-code, which must include the first 3 steps of the diagram in Section \ref{sec:task}\\
+		\hline
+		May, 13th			& Present a working edit menu loop, with the exit option and one edit option implemented.\\
+		\hline
+		May, 20th			& Present the fully-working edit menu loop with all options implemented.\\
+		\hline
+		\textbf{May, 27th}	& \textbf{2nd Semester Exam}\\
+		\hline
+		\textbf{May, 29th}	& Deliver the .java file with your source-code, via e-mail \emph{wbombardellis@gmail.com}, until 23:59.\\
+	\end{tabular}
+	
+	\section{Delivery}
+	Final delivery due to \textbf{May, 29th, 2020, 23:59}, via e-mail \emph{wbombardellis@gmail.com}. A .java file containing the source-code. The file's name must contain the first and last names of all authors.
+
+	\section{Evaluation}
+	The grade will be given using the following schema:
+	\begin{itemize}
+		\item 80\% Code correctness: Compiles and runs correctly with all features implemented.
+		\item 20\% Presentation: Code organization/ indentation
+	\end{itemize}
+	\par \par
+	\begin{itemize}
+		\item Plagiarism implies invalid solution.
+		\item Late delivery implies that you get only 70\% of the grade.
+	\end{itemize}
+
+	\section{Alternative}
+	If you have your own idea for a program you may propose it until April, 24th. If it gets accepted you may write it, instead of solving the exercise described above.
+\end{document}
